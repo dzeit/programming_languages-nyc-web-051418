@@ -9,7 +9,7 @@ def reformat_languages(languages)
           
         new_hash[lang_name][:style] = []
       end 
-      
+      binding.pry if lang_name == :javascript
       new_hash[lang_name][:style].push(style) 
     end 
   end
