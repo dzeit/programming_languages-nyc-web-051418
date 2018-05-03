@@ -3,13 +3,10 @@ def reformat_languages(languages)
   new_hash = {}
     languages.each do |style, lang|
       lang.each do |lang_name, type|
-        
-         
-        if !new_hash[lang_name][:style]
-          
+        if !new_hash[lang_name]
+          new_hash[lang_name] = type
         new_hash[lang_name][:style] = []
       end 
-      binding.pry if lang_name == :javascript
       new_hash[lang_name][:style].push(style) 
     end 
   end
